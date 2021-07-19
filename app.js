@@ -10,6 +10,7 @@ var usersRouter = require("./routes/users");
 var khachhangController = require("./controllers/khachhangController");
 var hoaController = require("./controllers/hoaController");
 var hoaModel = require("./models/hoamodel1");
+var hoaModel1 = require("./models/hoamodel");
 var donhang = require("./controllers/donhangcontroller");
 var session = require("express-session");
 var nodemailer = require("nodemailer");
@@ -238,7 +239,7 @@ app.post("/dangky", async function (req, res, next) {
 
 app.get("/details/:id", (req, res, next) => {
     var id = req.params.id;
-    hoaModel.find({ mahoa: id }, function (err, docs) {
+    hoaModel1.find({ mahoa: id }, function (err, docs) {
         if (err) next(createError(404));
         else {
             res.render("details/detailview", {
@@ -302,7 +303,7 @@ app.use("/", indexRouter);
 async function dangnhap(req, res, next, tendn, matkhau) {
     var kh = await khachhangController.login(tendn, matkhau);
     console.log(kh);
-    hoaModel.find({}, function (err, docs) {
+    hoaModel1.find({}, function (err, docs) {
         if (err) next(createError(404));
         else {
             res.json(kh);
