@@ -1,0 +1,25 @@
+<div class="container main">
+    <H1>Danh sách kết quả tìm được từ: <%-key %> </H1>
+    <div class="row">
+        <% hoas.forEach((hoa) => { %>
+        <div class="col-xl-3">
+            <div class="card" style="">
+                <img
+                    class="card-img-top"
+                    src="/images/<%=hoa.hinh%>"
+                    alt="Card image cap"
+                />
+                <div class="card-body">
+                    <h5 class="card-title">Tên Hoa:<%=hoa.tenhoa%></h5>
+                    <p class="card-text">Giá bán: <%=hoa.giaban%></p>
+                    <a href="#" class="btn btn-primary">Thêm vào giỏ hàng</a>
+                </div>
+            </div>
+        </div>
+        <% }) %>
+    </div>
+</div>
+<script>
+    var hoas = <%- JSON.stringify(hoas) %>
+    console.log(hoas);
+</script>

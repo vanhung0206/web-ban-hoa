@@ -1,0 +1,33 @@
+<div class="container" style="margin: 30px auto">
+    <div class="row">
+        <h1 style="width: 100%; text-align: center">
+            Thông tin chi tiết của hoa
+        </h1>
+        <table
+            width="100%"
+            align="center"
+            style="font-size: 24px; line-height: 34px"
+        >
+            <tbody>
+                <tr>
+                    <td
+                        width="44%"
+                        style="text-align: right; padding-right: 30px"
+                    >
+                        <img src="/images/<%-hoas[0].hinh%>" />
+                    </td>
+                    <td>
+                        Tên hoa : <%-hoas[0].tenhoa%><br />Giá bán :
+                        <%-hoas[0].giaban%><br />Mô Tả : <%-hoas[0].mota%><br />
+                        <a href="/">Về Trang Chủ </a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<script>
+    var x = <%-JSON.stringify(hoas)%>;
+    console.log(x);
+</script>

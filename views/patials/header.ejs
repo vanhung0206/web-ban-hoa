@@ -1,0 +1,506 @@
+<header>
+    <!-- Topbar -->
+    <div id="topbar">
+        <div class="container">
+            <div class="row topbar-main">
+                <div class="topbar__item-left">hoadep.com.vn</div>
+                <div class="topbar__item-right">
+                    <ul class="topbar__list">
+                        <li
+                            style="cursor: pointer"
+                            class="topbar__item dangnhapthanhcong"
+                        >
+                            <div id="dangnhap">Đăng nhập</div>
+                        </li>
+                        <li
+                            style="cursor: pointer"
+                            class="topbar__item dangnhapthanhcong exit"
+                        >
+                            <div id="dangky">Đăng ký</div>
+                        </li>
+                        <li class="topbar__item">
+                            <form
+                                action="/timkiem"
+                                method="POST"
+                                class="topbar__item__search"
+                            >
+                                <input
+                                    name="key"
+                                    type="text"
+                                    placeholder="Tìm kiếm sản phẩm"
+                                    class="topbar__item__search__input"
+                                />
+                                <button
+                                    tpye="submit"
+                                    class="topbar__item__search__icon"
+                                >
+                                    <i class="ti-search"></i>
+                                </button>
+                            </form>
+                        </li>
+                        <a href="/chitietgiohang" class="topbar__item">
+                            <i class="ti-shopping-cart"></i>
+                            <span class="topbar__item__numbers">0</span>
+                        </a>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Navbar -->
+    <div class="header-main">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-4 logo">
+                    <a href="">
+                        <img
+                            src="/images/LogotypeKvitka.gif"
+                            alt=""
+                            class="logo-image"
+                        />
+                    </a>
+                </div>
+                <div class="col-xl-4 address address-1">
+                    <h6>Hà Nội:</h6>
+                    <p class="address-label">Điện thoại: (08) 9891234</p>
+                    <p class="address-label">
+                        Giờ mở cửa:8:00 - 22:00 mỗi ngày
+                    </p>
+                    <p class="address-label">Email: ktphuong@hcmuns.edu.vn</p>
+                </div>
+                <div class="col-xl-4 address-2">
+                    <table width="100%" border="0">
+                        <tbody>
+                            <tr>
+                                <td valign="top">
+                                    <h6 align="center" class="style5">
+                                        Có thể thanh toán bằng
+                                    </h6>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td valign="top">
+                                    <div align="center" class="style10">
+                                        <img
+                                            src="/images/IconCardMasterCard.gif"
+                                            width="37"
+                                            height="23"
+                                        />
+                                        <img
+                                            src="/images/IconCardVisaE.gif"
+                                            width="37"
+                                            height="23"
+                                        />
+                                        <img
+                                            src="/images/IconCardVisa.gif"
+                                            width="37"
+                                            height="23"
+                                        />
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Navbar -->
+    <div id="navigation">
+        <div class="container">
+            <div class="row">
+                <ul class="navigation__list">
+                    <li class="navigation__item">
+                        <a
+                            href="/"
+                            class="navigation__link navigation__item--active"
+                        >
+                            Trang chủ
+                        </a>
+                    </li>
+                    <li class="navigation__item">
+                        <a href="/Hoa-Cuc" class="navigation__link">
+                            Hoa cúc
+                        </a>
+                    </li>
+                    <li class="navigation__item">
+                        <a href="/Hoa-Cuoi" class="navigation__link">
+                            Hoa cưới
+                        </a>
+                    </li>
+                    <li class="navigation__item">
+                        <a href="/Hoa-Hong" class="navigation__link">
+                            Hoa hồng
+                        </a>
+                    </li>
+                    <li class="navigation__item">
+                        <a href="/Hoa-Xuan" class="navigation__link">
+                            Hoa Xuân</a
+                        >
+                    </li>
+                    <li class="navigation__item">
+                        <a href="" class="navigation__link"> </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- scroll Top -->
+    <div class="scrollTop">
+        <i class="ti-arrow-up"></i>
+    </div>
+</header>
+<!-- Đăng ký, Đăng nhập -->
+<div class="modal1">
+    <div class="modal__body">
+        <div class="modal__body__sign-in modal__body__page">
+            <div class="modal__body__sign-in__header">
+                <div
+                    style="
+                        display: flex;
+                        width: 80%;
+                        margin: 0 auto;
+                        box-shadow: 0 10px 10px 8px rgb(208, 213, 240);
+                        border-radius: 25px;
+                        transition: all 0.5s;
+                    "
+                >
+                    <h3
+                        class="
+                            modal__body__sign-in__header-title
+                            modal__body__sign-in__header-title-DN
+                        "
+                        data-value="0"
+                    >
+                        đăng nhập
+                    </h3>
+                    <h3
+                        class="
+                            modal__body__sign-in__header-title
+                            modal__body__sign-in__header-title-DK
+                        "
+                        data-value="1"
+                    >
+                        đăng ký
+                    </h3>
+                </div>
+            </div>
+            <div class="modal__body__form__wrap">
+                <div
+                    class="
+                        modal__body__sign-in__form
+                        modal__body__sign-in__form__DN
+                    "
+                    data-value="modal__body__sign-in__header-title-DN"
+                >
+                    <input
+                        type="text"
+                        class="modal__body__sign-in__form-input"
+                        placeholder="Email/Số Điện Thoại/Tên Tài Khoản"
+                        id="userAjax"
+                    />
+                    <input
+                        type="password"
+                        class="modal__body__sign-in__form-input"
+                        placeholder="Mật Khẩu"
+                        id="passwordAjax"
+                    />
+                    <div class="modal__body__sign-in__form-support">
+                        <a
+                            href="#"
+                            class="modal__body__sign-in__form-helps__forget"
+                            >Quên Mật Khẩu</a
+                        >
+                        <a
+                            href=""
+                            class="modal__body__sign-in__form-helps__help"
+                            >Cần Trợ giúp?</a
+                        >
+                    </div>
+                    <div class="modal__body__sign-in__form-button">
+                        <button class="modol__body__sign-in__form-button-back">
+                            Trở lại
+                        </button>
+                        <button
+                            class="
+                                modol__body__sign-in__form-button-signin
+                                dangnhapAjax
+                            "
+                        >
+                            đăng nhập
+                        </button>
+                    </div>
+                </div>
+                <div
+                    class="
+                        modal__body__sign-in__form
+                        modal__body__sign-in__form__DK
+                    "
+                    data-value="modal__body__sign-in__header-title-DK"
+                >
+                    <input
+                        type="text"
+                        id="tendangnhapAjax"
+                        class="modal__body__sign-in__form-input"
+                        placeholder="Tên Đăng Nhập"
+                    />
+                    <input
+                        id="matkhauAjax"
+                        type="text"
+                        id="userAjax"
+                        class="modal__body__sign-in__form-input"
+                        placeholder="Mật Khẩu"
+                    />
+                    <input
+                        id="hovatenAjax"
+                        type="text"
+                        id="userAjax"
+                        class="modal__body__sign-in__form-input"
+                        placeholder="Họ và tên"
+                    />
+                    <input
+                        id="diachiAjax"
+                        type="text"
+                        id="passwordAjax"
+                        class="modal__body__sign-in__form-input"
+                        placeholder="Địa chỉ"
+                    />
+                    <input
+                        id="sdtAjax"
+                        type="text"
+                        id="passwordAjax"
+                        class="modal__body__sign-in__form-input"
+                        placeholder="Số điện thoại"
+                    />
+                    <input
+                        id="emailAjax"
+                        type="text"
+                        id="passwordAjax"
+                        class="modal__body__sign-in__form-input"
+                        placeholder="Email"
+                    />
+
+                    <div class="modal__body__sign-in__form-support">
+                        <a
+                            href="#"
+                            class="modal__body__sign-in__form-helps__forget"
+                            >Quên Mật Khẩu</a
+                        >
+                        <a
+                            href=""
+                            class="modal__body__sign-in__form-helps__help"
+                            >Cần Trợ giúp?</a
+                        >
+                    </div>
+                    <div class="modal__body__sign-in__form-button">
+                        <button class="modol__body__sign-in__form-button-back">
+                            Trở lại
+                        </button>
+                        <button
+                            class="
+                                modol__body__sign-in__form-button-signin
+                                dangkyAjax
+                            "
+                        >
+                            đăng ký
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="modal__body__footer">
+                <ul class="modal__body__footer__list">
+                    <li class="modal__body__footer__list-item">
+                        <a
+                            href=""
+                            class="modal__body__footer__list-item-link"
+                            style="background: green"
+                        >
+                            <i class="fas fa-sms"></i>
+                            <span>SMS</span>
+                        </a>
+                    </li>
+                    <li class="modal__body__footer__list-item">
+                        <a
+                            href=""
+                            class="modal__body__footer__list-item-link"
+                            style="background: rgb(34, 34, 138)"
+                        >
+                            <i class="fab fa-facebook-square"></i>
+                            <span>Facebook</span>
+                        </a>
+                    </li>
+                    <li class="modal__body__footer__list-item">
+                        <a
+                            href=""
+                            class="modal__body__footer__list-item-link"
+                            style="
+                                background: #fff;
+                                color: black;
+                                display: flex;
+                            "
+                        >
+                            <img
+                                src="/img/google.png"
+                                style="
+                                    width: 20px;
+                                    object-fit: cover;
+                                    margin-right: 30px;
+                                "
+                                alt=""
+                            />
+                            <span>Google</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    $(document).ready(() => {
+        window.onscroll = function () {
+            var offsetBottom =
+                document.querySelector(".header-main").offsetHeight;
+            let logo = document.querySelector(".topbar__item-left");
+            let scrollTop = document.querySelector(".scrollTop");
+
+            if (window.pageYOffset > offsetBottom) {
+                logo.innerHTML = `
+                    <a href ="/">
+                        <img src="/images/LogotypeKvitka.gif" style= "height: 42px; object-fit: contain; "></img>
+                    </a>
+                `;
+                scrollTop.style.display = "flex";
+            } else {
+                logo.innerHTML = "hoadep.com.vn";
+                scrollTop.style.display = "none";
+            }
+
+            scrollTop.addEventListener("click", (e) => {
+                console.log(e.target);
+                window.scrollTo({
+                    top: 0,
+                    left: 0,
+                    behavior: "smooth",
+                });
+            });
+        };
+        var loaihoa = <%- JSON.stringify(defineContent('maloai'))%>;
+
+        function addClassElement(i) {
+            let listElement = Array.from(document.querySelectorAll(".navigation__link"));
+            console.log(listElement);
+            listElement.forEach((element) => {
+                element.classList.remove("navigation__item--active");
+            })
+            listElement[i].classList.add("navigation__item--active");
+        }
+        if(loaihoa){
+            console.log(loaihoa);
+            switch (loaihoa){
+                case "Hoa-Cuc":
+                    addClassElement(1);
+                    break;
+                case "Hoa-Cuoi":
+                    addClassElement(2);
+                    break;
+                case "Hoa-Hong":
+                    addClassElement(3);
+                    break;
+                case "Hoa-Xuan":
+                    addClassElement(4);
+                    break;
+                default:
+                    addClassElement(0);
+            }
+        }
+        // Model đăng ký, đăng nhập
+        /* Modal */
+
+        var btnDangKy= document.querySelector('#dangky');
+        var btnDangNhap = document.querySelector('#dangnhap');
+        var Modal =document.querySelector('.modal1');
+        var modalBody = document.querySelector('.modal__body');
+        var modalDangNhap = document.querySelector('.modal__body__sign-in__form__DN');
+        var modalDangKy = document.querySelector('.modal__body__sign-in__form__DK');
+        var modal_form = document.querySelectorAll('.modal__body__sign-in__form');
+        var modal_title = document.querySelectorAll('.modal__body__sign-in__header-title');
+        var btnBack = document.querySelectorAll('.modol__body__sign-in__form-button-back');
+        function openModal(event,modalPage){
+            modal_form.forEach((ele)=>{
+                ele.style.display='none';
+            });
+            modal_title.forEach((ele)=>{
+                ele.classList.remove('model__title__active');
+            })
+            Modal.style.display='block';
+            modalPage.style.display='flex';
+            var titleClass = modalPage.getAttribute('data-value');
+            document.querySelector(`.${titleClass}`).classList.add('model__title__active');
+
+        }
+        for(var i =0;i<2;i++){
+            modal_title[i].addEventListener('click',function(e){
+                var number = parseInt(e.target.getAttribute('data-value'));
+                openModal('',modal_form[number]);
+            })
+        }
+        function closeModal(event = null){
+            Modal.style.display='none';
+        }
+
+        window.addEventListener('click',function(e){
+            if(e.target==modalBody){
+                closeModal();
+            }
+        })
+        btnDangKy.addEventListener('click',(e)=>openModal(e,modalDangKy));
+        btnDangNhap.addEventListener('click',(e)=>openModal(e,modalDangNhap));
+        btnBack.forEach((ele)=>{
+            ele.addEventListener('click',closeModal);
+        })
+
+        $(".dangnhapAjax").click(() => {
+            $.post( "/dangnhap", { ten_dn: $("#userAjax").val(), mat_khau: $("#passwordAjax").val() }, (data) => {
+                if(!data){
+                    alert("Thông tin đăng nhập không chính xác, Vui lòng kiểm tra lại!");
+                }
+                else {
+                    alert(`Đăng nhập thành công! Xin chào ${data.hoten}`);
+                    closeModal();
+                    $("#dangnhap").parent().append(data.hoten);
+                    $("#dangnhap").css("display","none");
+                    $("#dangky").parent().append("Thoát");
+                    $("#dangky").css("display","none");
+                    $(".exit").click(()=> {
+                        alert("Đăng xuất thành công!");
+                        window.location.reload();
+                    })
+
+                }
+            } )
+            .fail(function() {
+                  alert( "Lỗi chưa xác định" );
+              })
+
+        })
+
+        $(".dangkyAjax").click(() => {
+            $.post( "/dangky",{ ten_dn: $("#tendangnhapAjax").val(), mat_khau: $("#matkhauAjax").val(), ho_ten:$("#hovatenAjax").val() , email: $("#emailAjax").val(),dia_chi:$("#diachiAjax").val() , so_dt:$("#sdtAjax").val() }, (data) => {
+
+                    alert("Thông Ký thành công!");
+                    window.location.reload();
+
+
+
+
+            } )
+            .fail(function() {
+                  alert( "Lỗi chưa xác định, Vui lòng kiểm tra lại" );
+              })
+
+        })
+
+
+    });
+</script>

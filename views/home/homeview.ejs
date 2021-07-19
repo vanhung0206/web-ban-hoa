@@ -1,0 +1,41 @@
+<div class="container main">
+    <div class="row">
+        <% hoas.forEach((hoa) => { %>
+        <div class="col-xl-3">
+            <div class="card" style="">
+                <a href="/details/<%=hoa.mahoa%>">
+                    <img
+                        class="card-img-top"
+                        src="/images/<%=hoa.hinh%>"
+                        alt="Card image cap"
+                    />
+                </a>
+
+                <div class="card-body">
+                    <h5 class="card-title">Tên Hoa:<%=hoa.tenhoa%></h5>
+                    <p class="card-text">Giá bán: <%=hoa.giaban%></p>
+                    <button
+                        onclick="myFunction(<%=hoa.mahoa%>)"
+                        class="btn btn-primary"
+                    >
+                        Thêm vào giỏ hàng
+                    </button>
+                </div>
+            </div>
+        </div>
+        <% }) %>
+    </div>
+</div>
+<script>
+    function myFunction (mahoa) {
+        $.get(`/giohang/${mahoa}`, data => {
+            $(".topbar__item__numbers").html(data);
+            alert("Thêm vào giỏ hàng thành công");
+        })
+        .fail(function() {
+            alert( "Lỗi không xác định mời kiểm tra lại" );
+        })
+    }
+    var hoas = <%- JSON.stringify(hoas) %>
+    console.log(hoas);
+</script>

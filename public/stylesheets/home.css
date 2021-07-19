@@ -1,0 +1,16 @@
+.main {
+    margin-top: 40px;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.02);
+}
+
+.card-img-top {
+    height: 200px;
+    object-fit: cover;
+}
+
+.card {
+    margin-bottom: 20px;
+    overflow: hidden;
+    border-radius: 4px;
+}

@@ -1,0 +1,101 @@
+<script language="javascript" type="text/javascript">
+    function Xoamahang(mahoa) {
+        if (confirm("Bạn có muốn xóa mặt hàng này không?")) {
+            window.location = "/xoadonhang/" + mahoa;
+        }
+    }
+
+    $(document).ready(function () {
+        let obTemplates = {};
+        $(".inputAjax")
+            .toArray()
+            .forEach((item) => {
+                obTemplates[item.getAttribute("name")] =
+                    item.getAttribute("value");
+            });
+        console.log(obTemplates);
+        $(".capnhatAjax").click(() => {
+            $.post("/capnhapgiohang", obTemplates, (data) => {
+                alert("Cập nhật thành công!");
+            });
+        });
+    });
+</script>
+
+<div class="container">
+    <div class="row">
+        <form
+            name="form1"
+            style="width: 100%"
+            method="post"
+            action="/capnhapgiohang"
+        >
+            <p><%-ttctgh%></p>
+        </form>
+        <form name="form2" method="post" action="/xulydathang">
+            <table
+                width="400"
+                border="0"
+                align="center"
+                cellpadding="0"
+                cellspacing="0"
+            >
+                <tr>
+                    <td><span class="style3">Họ Tên:</span></td>
+                    <td>
+                        <input
+                            name="ho_ten"
+                            value="<%-hoten%>"
+                            type="text"
+                            id="ho_ten"
+                            size="30"
+                        />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span class="style3">Địa chỉ giao hàng:</span>
+                    </td>
+                    <td>
+                        <input
+                            name="dia_chi"
+                            type="text"
+                            id="dia_chi"
+                            value="<%-diachi%>"
+                            size="30"
+                        />
+                    </td>
+                </tr>
+                <tr>
+                    <td><span class="style3">Điện thoại:</span></td>
+                    <td>
+                        <input
+                            name="dien_thoai"
+                            type="text"
+                            id="dien_thoai"
+                            value="<%-dienthoai%>"
+                            size="30"
+                        />
+                    </td>
+                </tr>
+                <tr>
+                    <td><span class="style3">Email:</span></td>
+                    <td>
+                        <input
+                            name="email"
+                            type="text"
+                            id="email"
+                            value="<%-email%>"
+                            size="30"
+                        />
+                    </td>
+                </tr>
+                <tr>
+                    <td height="30" colspan="2" align="center">
+                        <input type="submit" name="Submit" value="Đặt hàng" />
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </div>
+</div>
